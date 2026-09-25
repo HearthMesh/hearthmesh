@@ -16,8 +16,8 @@ jobs:
       run:
         working-directory: mvp
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
         with:
           go-version-file: mvp/go.mod
       - run: go test ./...
@@ -31,8 +31,8 @@ jobs:
       run:
         working-directory: mvp
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
         with:
           go-version-file: mvp/go.mod
       - run: go test -race ./...
@@ -44,8 +44,8 @@ jobs:
       run:
         working-directory: mvp
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
         with:
           go-version-file: mvp/go.mod
       - run: test -z "$(gofmt -l .)"
