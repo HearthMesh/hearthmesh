@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">HearthMesh GitHub profile image</title>
+  <desc id="desc">The official four-node HearthMesh Beacon Route mark on a light background, padded for a circular profile crop.</desc>
+  <rect width="1024" height="1024" fill="#F7FAFC"/>
+  <g transform="translate(176 176) scale(6)">
+    <g fill="none" stroke="#001B4D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M56 45L16 75L56 99L96 75Z"/>
+      <path d="M56 45L39 88M56 45L73 88"/>
+    </g>
+    <g fill="#08C7F4" stroke="#001B4D" stroke-width="8">
+      <circle cx="16" cy="75" r="11"/>
+      <circle cx="56" cy="99" r="11"/>
+      <circle cx="96" cy="75" r="11"/>
+    </g>
+    <circle cx="56" cy="37" r="15" fill="#001B4D"/>
+    <circle cx="56" cy="37" r="8" fill="#FFA414"/>
+    <g stroke="#FFA414" stroke-width="7" stroke-linecap="square">
+      <path d="M56 4v16M27 13l14 9M85 13l-14 9"/>
+    </g>
+  </g>
+</svg>

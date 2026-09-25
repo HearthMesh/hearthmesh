@@ -1,0 +1,5 @@
+# Keep generated previews and deployment bundles out of source release archives.
+/HearthMesh_Site_Publish*.tar.gz export-ignore
+/docs/render_beacon/ export-ignore
+/docs/render_v0.1/ export-ignore
+/.openai/ export-ignore

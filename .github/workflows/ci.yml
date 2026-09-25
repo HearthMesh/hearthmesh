@@ -1,0 +1,51 @@
+name: HearthMesh MVP CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: Test and build (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: mvp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: mvp/go.mod
+      - run: go test ./...
+      - run: go vet ./...
+      - run: go build ./cmd/hearthmesh
+
+  race:
+    name: Race detector
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mvp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: mvp/go.mod
+      - run: go test -race ./...
+
+  format:
+    name: Formatting
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mvp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: mvp/go.mod
+      - run: test -z "$(gofmt -l .)"

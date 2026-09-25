@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112" role="img" aria-labelledby="title desc">
+  <title id="title">HearthMesh favicon</title>
+  <desc id="desc">The HearthMesh Beacon Route mark on a dark field.</desc>
+  <rect width="112" height="112" rx="20" fill="#071015"/>
+  <g fill="none" stroke="#E8EFF2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M56 45L16 75L56 99L96 75Z"/><path d="M56 45L39 88M56 45L73 88"/></g>
+  <g fill="#08C7F4" stroke="#E8EFF2" stroke-width="8"><circle cx="16" cy="75" r="11"/><circle cx="56" cy="99" r="11"/><circle cx="96" cy="75" r="11"/></g>
+  <circle cx="56" cy="37" r="15" fill="#E8EFF2"/><circle cx="56" cy="37" r="8" fill="#FFA414"/>
+  <g stroke="#FFA414" stroke-width="7" stroke-linecap="square"><path d="M56 4v16M27 13l14 9M85 13l-14 9"/></g>
+</svg>

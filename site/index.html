@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HearthMesh is a global, non-anonymous emergency continuity mesh for signed, attributable and replicated knowledge.">
+  <title>HearthMesh — When Infrastructure Fails, Knowledge Remains</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="HearthMesh home"><img src="assets/logo-horizontal.svg" alt="HearthMesh"></a>
+    <nav aria-label="Primary navigation">
+      <a href="#how">How it works</a>
+      <a href="#network">Network</a>
+      <a href="#guardrails">Guardrails</a>
+      <a href="#mvp">MVP</a>
+    </nav>
+    <a class="button button-small" href="#run">Run locally</a>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="signal"></span> Experimental open-source project</p>
+        <h1>Continuity, built<br>node by node.</h1>
+        <p class="lede">HearthMesh is a global, non-anonymous emergency continuity mesh. Independent nodes preserve signed, attributable and versioned knowledge when a publisher or connection goes offline.</p>
+        <div class="actions">
+          <a class="button" href="#run">Run the three-node demo</a>
+          <a class="text-link" href="#how">See how it works <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="principles" aria-label="Core principles">
+          <span>No AI at runtime</span><span>No anonymous publishing</span><span>No central cloud dependency</span>
+        </div>
+      </div>
+
+      <div class="network-card" aria-label="Illustration of three connected HearthMesh nodes">
+        <div class="card-top"><span>PUBLIC MESH / LOCAL VIEW</span><span class="live">3 NODES</span></div>
+        <svg class="hero-mesh" viewBox="0 0 560 420" role="img" aria-labelledby="mesh-title mesh-desc">
+          <title id="mesh-title">Three HearthMesh nodes replicating a signed pack</title>
+          <desc id="mesh-desc">A publisher in Rome is connected to replicas in Brussels and Nairobi. A reader accesses verified content from the mesh.</desc>
+          <defs>
+            <linearGradient id="lineGlow" x1="0" x2="1"><stop stop-color="#FFA414"/><stop offset="1" stop-color="#08AECA"/></linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <path class="mesh-line" d="M138 120 L418 112 L330 310 Z"/>
+          <path class="mesh-line faint" d="M138 120 L92 316 M418 112 L480 300 M330 310 L480 300"/>
+          <g class="node publisher" transform="translate(138 120)"><circle r="40"/><circle class="core" r="14"/><text y="66">PUBLISHER</text><text class="place" y="84">ROME</text></g>
+          <g class="node" transform="translate(418 112)"><circle r="40"/><circle class="core" r="14"/><text y="66">REPLICA</text><text class="place" y="84">BRUSSELS</text></g>
+          <g class="node" transform="translate(330 310)"><circle r="40"/><circle class="core" r="14"/><text y="66">REPLICA</text><text class="place" y="84">NAIROBI</text></g>
+          <g class="reader" transform="translate(92 316)"><circle r="24"/><text y="45">READER</text></g>
+          <g class="pack" transform="translate(255 188)"><rect x="-62" y="-22" width="124" height="44" rx="8"/><path d="M-42 0h18l7-8 12 16 9-8h29"/><text y="43">SIGNED PACK 04</text></g>
+        </svg>
+        <div class="verification"><span class="verification-icon">✓</span><div><strong>Signature valid</strong><small>Publisher and contents verified locally</small></div></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="how">
+      <div class="section-heading"><p class="index">01 / PURPOSE</p><h2>Useful knowledge should not disappear with one service.</h2></div>
+      <div class="two-column">
+        <p class="large-copy">HearthMesh helps people and organizations keep selected information accessible during disruption. Each publication carries its source, version and integrity evidence. Participating nodes can retain valid copies without relying on the original publisher.</p>
+        <div class="plain-note"><strong>Continuity, not secrecy.</strong><p>The public mesh is intentionally attributable. It does not hide publishers, route traffic anonymously or make security claims that the prototype cannot prove.</p></div>
+      </div>
+    </section>
+
+    <section class="section shell process" aria-labelledby="process-title">
+      <div class="section-heading"><p class="index">02 / FLOW</p><h2 id="process-title">From publication to recovery.</h2></div>
+      <ol class="steps">
+        <li><span>01</span><strong>Package</strong><p>A publisher groups selected files into an immutable HearthPack manifest.</p></li>
+        <li><span>02</span><strong>Sign</strong><p>The publisher signs the manifest with its persistent Ed25519 identity.</p></li>
+        <li><span>03</span><strong>Replicate</strong><p>Configured peers fetch the pack and verify every file before accepting it.</p></li>
+        <li><span>04</span><strong>Recover</strong><p>A damaged copy is rejected and can be restored from a healthy replica.</p></li>
+      </ol>
+    </section>
+
+    <section class="section dark-band" id="network">
+      <div class="shell">
+        <div class="section-heading"><p class="index">03 / NETWORK</p><h2>One protocol, two continuity spaces.</h2></div>
+        <div class="mode-grid">
+          <article class="mode public-mode"><div class="mode-label">GLOBAL PUBLIC MESH</div><h3>Shared emergency knowledge</h3><p>Readable material intended for broad distribution. Every pack is signed, attributable, versioned and subject to each node operator’s replication policy.</p><ul><li>Public contents</li><li>Identified publishers</li><li>Independent replicas</li><li>Local verification</li></ul></article>
+          <div class="bridge" aria-hidden="true"><span></span><b>same node software</b><span></span></div>
+          <article class="mode private-mode"><div class="mode-label">PRIVATE CONTINUITY CELL</div><h3>Restricted operational material</h3><p>A separate namespace for a family, company or institution. Access control and encryption are planned beyond the first MVP.</p><ul><li>Known membership</li><li>Restricted access</li><li>Explicit publication boundary</li><li>No anonymous channel</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="guardrails">
+      <div class="section-heading"><p class="index">04 / GUARDRAILS</p><h2>Designed to remain accountable.</h2></div>
+      <div class="guardrail-grid">
+        <article><span>01</span><h3>Attribution</h3><p>Every public pack identifies the cryptographic key that created it.</p></article>
+        <article><span>02</span><h3>Direct peers</h3><p>The official design does not include onion routing or publisher concealment.</p></article>
+        <article><span>03</span><h3>Readable public layer</h3><p>The global mesh does not offer anonymous encrypted storage for arbitrary uploads.</p></article>
+        <article><span>04</span><h3>Operator policy</h3><p>Each node chooses which publishers and categories it is willing to replicate.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="mvp">
+      <div class="section-heading"><p class="index">05 / MVP</p><h2>Watch a damaged replica recover.</h2></div>
+      <div class="demo" id="demo" data-step="0">
+        <div class="demo-stage">
+          <div class="demo-node publisher-node" data-node="a"><span>A</span><b>Publisher</b><small>Online</small></div>
+          <div class="demo-link link-ab"></div>
+          <div class="demo-node" data-node="b"><span>B</span><b>Replica</b><small>Verified</small></div>
+          <div class="demo-link link-bc"></div>
+          <div class="demo-node" data-node="c"><span>C</span><b>Replica</b><small>Verified</small></div>
+          <div class="pack-pulse" aria-hidden="true"></div>
+        </div>
+        <div class="demo-console" aria-live="polite"><code id="demo-log">Ready. Three nodes hold the same signed HearthPack.</code></div>
+        <div class="demo-controls">
+          <button class="button" id="demo-next" type="button">Start failure sequence</button>
+          <button class="reset" id="demo-reset" type="button">Reset</button>
+          <span id="demo-counter">0 / 4</span>
+        </div>
+      </div>
+      <p class="disclaimer">The MVP is an engineering demonstration, not a security certification or production-ready continuity system.</p>
+    </section>
+
+    <section class="section shell run-section" id="run">
+      <div><p class="index">06 / RUN LOCALLY</p><h2>Inspect the behavior yourself.</h2><p>Run the included host-side demonstration to build three temporary nodes, publish a signed pack, corrupt one replica and watch it recover. Docker Compose is available separately for persistent local nodes.</p></div>
+      <div class="terminal"><div class="terminal-bar"><i></i><i></i><i></i><span>terminal</span></div><pre><code>cd hearthmesh/mvp
+go test ./...
+sh demo.sh</code></pre><button type="button" id="copy-command">Copy commands</button></div>
+    </section>
+  </main>
+
+  <footer><div class="shell footer-inner"><img src="assets/logo-horizontal.svg" alt="HearthMesh"><p>Experimental. AI-free at runtime. Built for accountable continuity.</p><span>PRE-ALPHA</span></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>

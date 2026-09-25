@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 118" role="img" aria-labelledby="title desc">
+  <title id="title">HearthMesh monochrome logo</title>
+  <desc id="desc">One-color HearthMesh Beacon Route logo for single-ink applications.</desc>
+  <g transform="translate(2 1) scale(.92)" stroke="#111820">
+    <g fill="none" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><path d="M56 45L16 75L56 99L96 75Z"/><path d="M56 45L39 88M56 45L73 88"/></g>
+    <g fill="#111820" stroke-width="8"><circle cx="16" cy="75" r="11"/><circle cx="56" cy="99" r="11"/><circle cx="96" cy="75" r="11"/></g>
+    <circle cx="56" cy="37" r="15" fill="#111820" stroke="none"/>
+    <g fill="none" stroke-width="7" stroke-linecap="square"><path d="M56 4v16M27 13l14 9M85 13l-14 9"/></g>
+  </g>
+  <text x="126" y="57" fill="#111820" font-family="Inter, Avenir Next, Segoe UI, sans-serif" font-size="43" font-weight="760" letter-spacing="-1.5">HEARTHMESH</text>
+  <text x="128" y="86" fill="#111820" font-family="Inter, Avenir Next, Segoe UI, sans-serif" font-size="13.5" font-weight="600" letter-spacing="1.05">WHEN INFRASTRUCTURE FAILS, KNOWLEDGE REMAINS.</text>
+</svg>

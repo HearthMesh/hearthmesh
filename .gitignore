@@ -1,0 +1,19 @@
+.sites-runtime/
+dist/
+*.tmp
+*.log
+__pycache__/
+*.pyc
+docs/qa/
+docs/render_*/
+HearthMesh_Site_Publish*.tar.gz
+
+# Local MVP build and demonstration artifacts
+mvp/*.exe
+mvp/hearthmesh
+mvp/*.key
+mvp/*.zip
+mvp/public-files/
+mvp/node-a/
+mvp/node-b/
+mvp/node-c/
